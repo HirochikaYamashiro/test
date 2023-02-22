@@ -1,0 +1,1 @@
+select *  from hgoehoge limit 10     ;
