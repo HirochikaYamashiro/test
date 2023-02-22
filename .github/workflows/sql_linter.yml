@@ -37,7 +37,7 @@ jobs:
         run: |
           for file in $(git diff origin/${GITHUB_BASE_REF}..origin/${GITHUB_HEAD_REF} --name-only --diff-filter=d -- '*.sql') 
           do
-            faketty sqlfluff fix $file --rules L001,L002,L003,L004,L005,L006,L010,L011,L012,L017,L018,L019,L022,L023 --dialect bigquery -f
+            faketty sqlfluff fix $file --dialect bigquery -f
           done
       # 変更内容をコミット
       - name: commit
